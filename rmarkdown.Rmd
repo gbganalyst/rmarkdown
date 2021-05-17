@@ -1,0 +1,299 @@
+---
+title: "Introduction to Rmarkdown"
+date: '`r format(Sys.Date(), "%B %d, %Y")`'
+output:
+  xaringan::moon_reader:
+    #yolo: true
+    lib_dir: libs
+    css: xaringan-themer.css
+    #seal: true
+    nature:
+      #autoplay: 30000
+      # countdown: 60000
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      #ratio: 16:9
+      slideNumberFormat: "%current%"
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+
+knitr::opts_chunk$set(echo = TRUE, 
+                      tidy = 'styler', 
+                      comment = NA,
+                      message = FALSE,
+                      warning = FALSE)
+```
+
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_duo_accent(
+  primary_color = "#1381B0",
+  secondary_color = "#FF961C",
+  inverse_header_color = "#FFFFFF"
+)
+
+# Loaded packages
+
+install.load::install_load(c("knitr", "xaringanExtra", "xaringan", "tidyverse", "kableExtra", "countdown"))
+
+xaringanExtra::use_xaringan_extra(include = c("tile_view", "editable", "share_again", "broadcast", "animate_css", "panelset", "tachyons", "fit_screen", "clipboard", "search", "scribble", "freezeframe"))
+
+use_webcam(width = 150, height = 150)
+
+ 
+use_animate_all("fade")
+
+use_extra_styles()
+```
+class: middle
+
+.w-100.lh-copy[
+
+Goal:
+
+> The goal of this training is to make you awesome in the use of markdown, rmarkdown, and xaringan presentation.
+
+]
+
+
+
+---
+
+background-image: url(images/prof.jpg)
+background-size: cover
+background-position: 50% 50%
+class: bottom, inverse
+
+## Relax; it is never difficult!
+
+
+---
+
+# Table of content
+
+.w-100.lh-copy[
+
+- [Introduction to rmarkdown](#rmark1)
+
+- [markdown concept](#rmark2)
+
+- [rmarkdown concept](#rmark3)
+
+- [xaringan and xaringanExtra](#rmark3)
+
+
+]
+
+---
+background-image: url(images/prof1.jpg)
+background-position: 50% 50%
+background-size: cover
+class: center, bottom
+
+# Let's get started!
+
+---
+class: middle, center, inverse
+name: rmark1
+
+# Introduction to Rmarkdown
+
+```{r, echo=FALSE}
+knitr::include_graphics("images/rmarkdown.png")
+```
+
+
+---
+
+# Introduction to Rmarkdown
+
+.w-100.lh-copy[
+R Markdown provides an authoring framework for data science. You can use a single R Markdown file to both:
+]
+
+--
+
+- save and execute code
+
+--
+
+.w-100.lh-copy[
+- generate high quality document, report, presentation and dashboard that can be shared with an audience.
+]
+
+--
+
+.w-100.lh-copy[
+R Markdown documents are fully reproducible and also support multiple languages including R, Python, and SQL.
+]
+
+---
+background-image: url(images/prof1.jpg)
+background-position: 50% 50%
+background-size: cover
+class: center, bottom
+
+## Some examples
+
+---
+
+### Rmarkdown output
+
+.w-100.lh-copy[
+R Markdown supports dozens of static and dynamic output formats including `HTML`, `PDF`, `MS Word`, `Beamer`, `HTML5 slides`, `books`, `dashboards`, `shiny applications`, `scientific articles`, `websites`, and many more.
+]
+
+--
+
+Some examples ...
+
+---
+class: middle, center, inverse
+name: rmark2
+
+# Markdown concept
+
+
+```{r, echo=FALSE}
+knitr::include_graphics("images/Markdown.png")
+```
+
+---
+## Markdown concept
+
+.w-100.lh-copy[
+> Markdown is an easy way for non-coders to write in a format that could be easily converted into HTML. 
+
+]
+
+.w-100.lh-copy[
+It is a plain text formatting syntax used to write content on the web and it doesn’t do anything fancy like change the font size, color, or type — just the essentials, using keyboard symbols you already know.
+
+]
+
+--
+
+You can use markdown to make:
+
+.pull-left[
+- Headers
+- Lists
+- Links
+- Images
+- Block quotes
+- LaTeX equations
+]
+
+--
+
+.pull-right[
+
+- Italicized text
+- Bold text
+- Superscripts
+- Subscripts
+- Tables
+- Footnotes
+]
+
+---
+
+class: middle, center, inverse
+
+# Let's go practical!
+
+--
+
+.pull-left[
+### [Markdown syntax](https://commonmark.org/help/)
+]
+
+
+--
+
+.pull-right[
+### [Markdown to HTML](https://spec.commonmark.org/dingus/)
+]
+
+--
+
+```{r, echo=FALSE, out.height= "60%", out.width="60%"}
+knitr::include_graphics("images/Markdown.png")
+```
+
+---
+class: middle, center, inverse
+name: rmark3
+
+# rmarkdown concept
+
+```{r, echo=FALSE}
+knitr::include_graphics("images/rmarkdown.png")
+```
+
+---
+
+# Rmarkdown concept
+
+.w-100.lh-copy[
+R Markdown file is a plain text file that has the extension `.Rmd` while an R script has the extension `.R`. RStudio automatically load `rmarkdown` package when needed.]
+
+--
+
+Rmarkdown contains three important types of content:
+
+**1.** YAML header surrounded by --- 
+
+```yaml
+---
+title: "Introduction to R Programming Langauge"
+author: "Seyi Makinde"
+date: "17/4/2021"
+output: html_document
+---
+```
+---
+
+Rmarkdown contains three important types of content:
+
+--
+
+**2.** Chunks of R code surrounded by <code>```</code>. 
+
+
+````markdown
+```{r}`r ''`
+x <- 1
+
+y <- 3
+
+print(x+y)
+```
+````
+
+
+You can run each code chunk by clicking the Run icon (it looks like a play button at the top of the chunk), or by pressing `Cmd/Ctrl + Shift + Enter`.
+
+--
+
+**3.** Text mixed with simple text formatting (**markdown**).
+
+--
+
+RStudio executes the code and displays the results inline with the code.
+
+
+---
+background-image: url(images/prof1.jpg)
+background-position: 50% 50%
+background-size: cover
+class: center, bottom
+
+### Let's get started!
+

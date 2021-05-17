@@ -1,0 +1,264 @@
+---
+title: "Intro to Interactive Slide Decks | Xaringan"
+author: "Ezekiel Adebayo Ogundepo"
+institute: "Data Science Nigeria"
+date: "`r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    css: [default,  "rladies", "rladies-fonts"]
+    lib_dir: libs
+    nature:
+      highlightStyle: arta
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+
+knitr::opts_chunk$set(echo = TRUE, 
+                      tidy = 'styler', 
+                      comment = NA,
+                      message = FALSE,
+                      warning = FALSE)
+
+```
+
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_duo_accent(
+  primary_color = "#1381B0",
+  secondary_color = "#FF961C",
+  inverse_header_color = "#FFFFFF"
+)
+
+# Loaded packages
+
+install.load::install_load(c("knitr", "xaringanExtra", "xaringan", "tidyverse", "kableExtra"))
+
+# Use some functions in xaringanExtra
+
+use_tile_view()
+
+use_panelset()
+
+use_webcam(width = 150, height = 150)
+
+use_clipboard()
+
+use_editable()
+
+use_animate_all("fade")
+
+use_broadcast()
+
+```
+class: center, middle
+
+```{r, echo=FALSE}
+knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg")
+```
+
+## xaringan
+
+### /ʃæ.'riŋ.ɡæn/
+
+
+---
+class: inverse, center, middle
+
+# Get Started
+
+---
+
+# Hello World
+
+Install the **xaringan** package from [Github](https://github.com/yihui/xaringan):
+
+```{r eval=FALSE, tidy=FALSE}
+devtools::install_github("yihui/xaringan")
+```
+
+
+
+--
+
+You are recommended to use the [RStudio IDE](https://www.rstudio.com/products/rstudio/), but you do not have to.
+
+- Create a new R Markdown document from the menu `File -> New File -> R Markdown -> From Template -> Ninja Presentation`
+
+--
+
+- Click the `Knit` button to compile it;
+
+--
+
+- or use the [RStudio Addin](https://rstudio.github.io/rstudioaddins/)<sup>2</sup> "Infinite Moon Reader" to live preview the slides (every time you update and save the Rmd document, the slides will be automatically reloaded in RStudio Viewer.
+
+
+---
+
+# Awesome Title
+
+Here is some text. 
+
+- Bullet 1
+- Bullet 2
+
+``` r
+code <- "awesome"
+```
+
+And don't forget to set up __Infinite Moon Reader RStudio Addin!__
+
+---
+# New Slide
+
+This is a simple introduction to Xaringan. This is my beloved brother
+
+---
+class: top, center
+
+#  Top Center
+
+More stuff
+
+.left[I love you]
+
+.right[I love you the more ...]
+
+---
+# Incremental Reveals
+
+--
+
+item 1
+
+--
+
+Item 2
+
+--
+
+One final piece
+
+---
+
+# Two-Columns
+
+.pull-left[
+
+- Hello
+
+- how
+
+- are
+
+- you
+
+- ?
+]
+
+.pull-right[
+
+I love you
+]
+
+---
+
+# Code Highlight & Tables
+
+```{r, echo=T}
+iris %>%
+  knitr::kable()
+```
+
+---
+
+# DT Tables
+
+```{r, echo=FALSE}
+library(DT)
+
+iris %>% DT::datatable()
+```
+
+---
+
+# Maps
+
+```{r, out.width="100%", warning=F}
+library(leaflet)
+
+leaflet() %>%
+  setView(lng = -71.0589, lat = 42.3601, zoom = 12) %>%
+  addProviderTiles(providers$Esri.NatGeoWorldMap)
+```
+
+---
+
+# Plots
+
+```{r, out.width="100%", out.height="70%"}
+library(timetk)
+
+m4_monthly %>%
+  plot_time_series(date, value, .facet_vars = id, .facet_ncol = 2)
+```
+
+---
+# Side-by-Side
+
+.pull-left[
+
+Let's check out the monthly seasonality. 
+
+```{r}
+library(timetk)
+
+p <- m4_monthly %>%
+  filter(id == "M750") %>%
+  plot_time_series(
+    .date_var   = date, 
+    .value      = value
+  )
+```
+
+]
+
+.pull-right[
+```{r, echo=F, out.width="100%"}
+p
+```
+
+
+]
+
+---
+
+# Themes
+
+```{r}
+names(xaringan:::list_css())
+```
+
+
+
+---
+
+# Lot's more!
+
+- [_"Meet xaringan"_: Allison Hill's RStudio 2019 Conf Talk](https://arm.rbind.io/slides/xaringan.html)
+
+- [_"Applying design guidelines to slides with {xaringanthemer}"_: By Katie Jolly](https://www.katiejolly.io/blog/2021-03-16/designing-slides)
+
+- [_"Presentation Ninja with xaringan"_ by Yihui Xie](https://slides.yihui.org/xaringan/#1)
+
+.center[
+  ![](https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg)
+]
+
+
+

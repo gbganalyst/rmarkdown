@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Introduction to Rmarkdown</title>
+    <meta charset="utf-8" />
+    <meta name="date" content="2021-05-18" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
+    <link href="libs/animate.css/animate.xaringan.css" rel="stylesheet" />
+    <link href="libs/tachyons/tachyons.min.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra_fit-screen/fit-screen.js"></script>
+    <link href="libs/panelset/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset/panelset.js"></script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"d785fc5fea1f44eb9679fdf97c76c1a0","expires":14}</script>
+    <script src="libs/himalaya/himalaya.js"></script>
+    <script src="libs/js-cookie/js.cookie.js"></script>
+    <link href="libs/editable/editable.css" rel="stylesheet" />
+    <script src="libs/editable/editable.js"></script>
+    <script src="libs/clipboard/clipboard.min.js"></script>
+    <link href="libs/xaringanExtra-clipboard/xaringanExtra-clipboard.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-clipboard/xaringanExtra-clipboard.js"></script>
+    <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
+    <link href="libs/shareon/shareon.min.css" rel="stylesheet" />
+    <script src="libs/shareon/shareon.min.js"></script>
+    <link href="libs/xaringanExtra-shareagain/shareagain.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-shareagain/shareagain.js"></script>
+    <script src="libs/peerjs/peerjs.min.js"></script>
+    <script src="libs/tiny.toast/toast.min.js"></script>
+    <link href="libs/xaringanExtra-broadcast/broadcast.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-broadcast/broadcast.js"></script>
+    <script src="libs/mark.js/mark.min.js"></script>
+    <link href="libs/xaringanExtra-search/search.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-search/search.js"></script>
+    <script>window.addEventListener('load', function() { window.xeSearch = new RemarkSearch({"position":"bottom-left","caseSensitive":false,"showIcon":false,"autoSearch":true}) })</script>
+    <script src="libs/fabric/fabric.min.js"></script>
+    <link href="libs/xaringanExtra-scribble/scribble.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-scribble/scribble.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#FF0000"],"pen_size":3,"eraser_size":30}) })</script>
+    <script src="libs/freezeframe/freezeframe.min.js"></script>
+    <script src="libs/xaringanExtra-freezeframe/freezeframe-init.js"></script>
+    <script id="xaringanExtra-freezeframe-options" type="application/json">{"selector":"img[src$=\"gif\"]","trigger":"click","overlay":false,"responsive":true,"warnings":true}</script>
+    <script src="libs/xaringanExtra-webcam/webcam.js"></script>
+    <script id="xaringanExtra-webcam-options" type="application/json">{"width":"150","height":"150","margin":"1em"}</script>
+    <link href="libs/animate.css-xaringan/animate.fade.css" rel="stylesheet" />
+    <link href="libs/xaringanExtra-extra-styles/xaringanExtra-extra-styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Introduction to Rmarkdown
+### May 18, 2021
+
+---
+
+
+
+
+
+
+class: middle
+
+.w-100.lh-copy[
+
+Goal:
+
+&gt; The goal of this training is to make you awesome in the use of markdown, rmarkdown, and xaringan presentation.
+
+]
+
+
+
+---
+
+background-image: url(images/prof.jpg)
+background-size: cover
+background-position: 50% 50%
+class: bottom, inverse
+
+## Relax; it is never difficult!
+
+
+---
+
+# Table of content
+
+.w-100.lh-copy[
+
+- [Introduction to rmarkdown](#rmark1)
+
+- [markdown concept](#rmark2)
+
+- [rmarkdown concept](#rmark3)
+
+- [xaringan and xaringanExtra](#rmark3)
+
+
+]
+
+---
+background-image: url(images/prof1.jpg)
+background-position: 50% 50%
+background-size: cover
+class: center, bottom
+
+# Let's get started!
+
+---
+class: middle, center, inverse
+name: rmark1
+
+# Introduction to Rmarkdown
+
+&lt;img src="images/rmarkdown.png" width="281" /&gt;
+
+
+---
+
+# Introduction to Rmarkdown
+
+.w-100.lh-copy[
+R Markdown provides an authoring framework for data science. You can use a single R Markdown file to both:
+]
+
+--
+
+- save and execute code
+
+--
+
+.w-100.lh-copy[
+- generate high quality document, report, presentation and dashboard that can be shared with an audience.
+]
+
+--
+
+.w-100.lh-copy[
+R Markdown documents are fully reproducible and also support multiple languages including R, Python, and SQL.
+]
+
+---
+background-image: url(images/prof1.jpg)
+background-position: 50% 50%
+background-size: cover
+class: center, bottom
+
+## Some examples
+
+---
+
+### Rmarkdown output
+
+.w-100.lh-copy[
+R Markdown supports dozens of static and dynamic output formats including `HTML`, `PDF`, `MS Word`, `Beamer`, `HTML5 slides`, `books`, `dashboards`, `shiny applications`, `scientific articles`, `websites`, and many more.
+]
+
+--
+
+Some examples ...
+
+---
+class: middle, center, inverse
+name: rmark2
+
+# Markdown concept
+
+
+&lt;img src="images/Markdown.png" width="1397" /&gt;
+
+---
+## Markdown concept
+
+.w-100.lh-copy[
+&gt; Markdown is an easy way for non-coders to write in a format that could be easily converted into HTML. 
+
+]
+
+.w-100.lh-copy[
+It is a plain text formatting syntax used to write content on the web and it doesn’t do anything fancy like change the font size, color, or type — just the essentials, using keyboard symbols you already know.
+
+]
+
+--
+
+You can use markdown to make:
+
+.pull-left[
+- Headers
+- Lists
+- Links
+- Images
+- Block quotes
+- LaTeX equations
+]
+
+--
+
+.pull-right[
+
+- Italicized text
+- Bold text
+- Superscripts
+- Subscripts
+- Tables
+- Footnotes
+]
+
+---
+
+class: middle, center, inverse
+
+# Let's go practical!
+
+--
+
+.pull-left[
+### [Markdown syntax](https://commonmark.org/help/)
+]
+
+
+--
+
+.pull-right[
+### [Markdown to HTML](https://spec.commonmark.org/dingus/)
+]
+
+--
+
+&lt;img src="images/Markdown.png" width="60%" height="60%" /&gt;
+
+---
+class: middle, center, inverse
+name: rmark3
+
+# rmarkdown concept
+
+&lt;img src="images/rmarkdown.png" width="281" /&gt;
+
+---
+
+# Rmarkdown concept
+
+.w-100.lh-copy[
+R Markdown file is a plain text file that has the extension `.Rmd` while an R script has the extension `.R`. RStudio automatically load `rmarkdown` package when needed.]
+
+--
+
+Rmarkdown contains three important types of content:
+
+**1.** YAML header surrounded by --- 
+
+```yaml
+---
+title: "Introduction to R Programming Langauge"
+author: "Seyi Makinde"
+date: "17/4/2021"
+output: html_document
+---
+```
+---
+
+Rmarkdown contains three important types of content:
+
+--
+
+**2.** Chunks of R code surrounded by &lt;code&gt;```&lt;/code&gt;. 
+
+
+````markdown
+```{r}
+x &lt;- 1
+
+y &lt;- 3
+
+print(x+y)
+```
+````
+
+
+You can run each code chunk by clicking the Run icon (it looks like a play button at the top of the chunk), or by pressing `Cmd/Ctrl + Shift + Enter`.
+
+--
+
+**3.** Text mixed with simple text formatting (**markdown**).
+
+--
+
+RStudio executes the code and displays the results inline with the code.
+
+
+---
+background-image: url(images/prof1.jpg)
+background-position: 50% 50%
+background-size: cover
+class: center, bottom
+
+### Let's get started!
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"slideNumberFormat": "%current%"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
