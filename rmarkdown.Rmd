@@ -160,7 +160,7 @@ name: rmark2
 # Markdown concept
 
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, out.height= "60%", out.width= "60%"}
 knitr::include_graphics("images/Markdown.png")
 ```
 
