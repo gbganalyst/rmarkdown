@@ -12,7 +12,7 @@
     <script src="libs/xaringanExtra_fit-screen/fit-screen.js"></script>
     <link href="libs/panelset/panelset.css" rel="stylesheet" />
     <script src="libs/panelset/panelset.js"></script>
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x4963c3fb6a14aa986127c439927fd27","expires":14}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x5afc45a2a45474aacc43149264646c1","expires":14}</script>
     <script src="libs/himalaya/himalaya.js"></script>
     <script src="libs/js-cookie/js.cookie.js"></script>
     <link href="libs/editable/editable.css" rel="stylesheet" />
@@ -36,7 +36,7 @@
     <script src="libs/fabric/fabric.min.js"></script>
     <link href="libs/xaringanExtra-scribble/scribble.css" rel="stylesheet" />
     <script src="libs/xaringanExtra-scribble/scribble.js"></script>
-    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#FF0000"],"pen_size":3,"eraser_size":30}) })</script>
+    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#FF0000"],"pen_size":3,"eraser_size":30,"palette":[]}) })</script>
     <script src="libs/freezeframe/freezeframe.min.js"></script>
     <script src="libs/xaringanExtra-freezeframe/freezeframe-init.js"></script>
     <script id="xaringanExtra-freezeframe-options" type="application/json">{"selector":"img[src$=\"gif\"]","trigger":"click","overlay":false,"responsive":true,"warnings":true}</script>
@@ -60,6 +60,40 @@ background-size: 40%, 10%
 class: title-page, center, middle
 
 ## Introduction to Rmarkdown
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 110px;
+height: 128px;
+z-index: 0;
+background-image: url(images/logo.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:1em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-page):not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('a')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = 'http://www.datasciencenigeria.org'
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
 
 ---
 class: middle
@@ -102,7 +136,7 @@ class: bottom, inverse
 background-image: url(images/prof1.jpg)
 background-position: 50% 50%
 background-size: cover
-class: center, bottom
+class: center, bottom, hide_logo
 
 # Let's get started!
 
@@ -143,7 +177,7 @@ R Markdown documents are fully reproducible and also support multiple languages 
 background-image: url(images/prof1.jpg)
 background-position: 50% 50%
 background-size: cover
-class: center, bottom
+class: center, bottom, hide_logo
 
 ## Some examples
 
@@ -244,7 +278,7 @@ R Markdown file is a plain text file that has the extension `.Rmd` while an R sc
 
 --
 
-Rmarkdown contains three important types of content:
+Rmarkdown contains three important type of contents:
 
 **1.** YAML header surrounded by --- 
 
@@ -291,7 +325,7 @@ RStudio executes the code and displays the results inline with the code.
 background-image: url(images/prof1.jpg)
 background-position: 50% 50%
 background-size: cover
-class: center, bottom
+class: center, bottom, hide_logo
 
 ### Let's get started!
 

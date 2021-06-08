@@ -56,6 +56,15 @@ class: title-page, center, middle
 
 ## Introduction to Rmarkdown
 
+```{r, echo=FALSE}
+use_logo(
+  image_url = "images/logo.png",
+  link_url = "http://www.datasciencenigeria.org",
+  position = xaringanExtra::css_position(top = "1em", right = "1em"),
+  exclude_class = c("title-page", "inverse", "hide_logo")
+)
+```
+
 ---
 class: middle
 
@@ -97,7 +106,7 @@ class: bottom, inverse
 background-image: url(images/prof1.jpg)
 background-position: 50% 50%
 background-size: cover
-class: center, bottom
+class: center, bottom, hide_logo
 
 # Let's get started!
 
@@ -140,7 +149,7 @@ R Markdown documents are fully reproducible and also support multiple languages 
 background-image: url(images/prof1.jpg)
 background-position: 50% 50%
 background-size: cover
-class: center, bottom
+class: center, bottom, hide_logo
 
 ## Some examples
 
@@ -247,7 +256,7 @@ R Markdown file is a plain text file that has the extension `.Rmd` while an R sc
 
 --
 
-Rmarkdown contains three important types of content:
+Rmarkdown contains three important type of contents:
 
 **1.** YAML header surrounded by --- 
 
@@ -294,7 +303,7 @@ RStudio executes the code and displays the results inline with the code.
 background-image: url(images/prof1.jpg)
 background-position: 50% 50%
 background-size: cover
-class: center, bottom
+class: center, bottom, hide_logo
 
 ### Let's get started!
 
