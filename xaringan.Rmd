@@ -6,6 +6,7 @@ date: "`r Sys.Date()`"
 output:
   xaringan::moon_reader:
     css: [default,  "rladies", "rladies-fonts"]
+    seal: false
     lib_dir: libs
     nature:
       highlightStyle: arta
@@ -55,6 +56,17 @@ use_animate_all("fade")
 use_broadcast()
 
 ```
+background-image: url(images/DSN.PNG), url(images/R_logo.png)
+background-position: 0% 100%, 100% 0%
+background-size: 40%, 10%
+
+class: title-page, center, middle
+
+## Interactive Slide Decks using Xaringan
+
+
+
+---
 class: center, middle
 
 ```{r, echo=FALSE}
@@ -102,9 +114,10 @@ You are recommended to use the [RStudio IDE](https://www.rstudio.com/products/rs
 
 # Awesome Title
 
-Here is some text. 
+Here are my points: 
 
 - Bullet 1
+
 - Bullet 2
 
 ``` r
@@ -116,18 +129,18 @@ And don't forget to set up __Infinite Moon Reader RStudio Addin!__
 ---
 # New Slide
 
-This is a simple introduction to Xaringan. This is my beloved brother
+This is a simple introduction to Xaringan. Think of xaringan like a PowerPoint presentation
 
 ---
 class: top, center
 
 #  Top Center
 
-More stuff
+Our team
 
-.left[I love you]
+.left[At my left hand is Seun, the business manager]
 
-.right[I love you the more ...]
+.right[Henry is sitting at the right hand side]
 
 ---
 # Incremental Reveals
@@ -142,7 +155,7 @@ Item 2
 
 --
 
-One final piece
+Item 3
 
 ---
 
@@ -163,14 +176,14 @@ One final piece
 
 .pull-right[
 
-I love you
+You are awesome in R programming
 ]
 
 ---
 
 # Code Highlight & Tables
 
-```{r, echo=T}
+```{r, echo=TRUE}
 iris %>%
   knitr::kable()
 ```
@@ -243,18 +256,15 @@ p
 ```{r}
 names(xaringan:::list_css())
 ```
-
-
-
 ---
 
 # Lot's more!
 
-- [_"Meet xaringan"_: Allison Hill's RStudio 2019 Conf Talk](https://arm.rbind.io/slides/xaringan.html)
+- [*"Meet xaringan"*: Allison Hill's RStudio 2019 Conf Talk](https://arm.rbind.io/slides/xaringan.html)
 
-- [_"Applying design guidelines to slides with {xaringanthemer}"_: By Katie Jolly](https://www.katiejolly.io/blog/2021-03-16/designing-slides)
+- [*"Applying design guidelines to slides with {xaringanthemer}"*: By Katie Jolly](https://www.katiejolly.io/blog/2021-03-16/designing-slides)
 
-- [_"Presentation Ninja with xaringan"_ by Yihui Xie](https://slides.yihui.org/xaringan/#1)
+- [*"Presentation Ninja with xaringan"* by Yihui Xie](https://slides.yihui.org/xaringan/#1)
 
 .center[
   ![](https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg)

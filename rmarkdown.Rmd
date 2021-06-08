@@ -6,7 +6,7 @@ output:
     #yolo: true
     lib_dir: libs
     css: xaringan-themer.css
-    #seal: true
+    seal: false
     nature:
       #autoplay: 30000
       # countdown: 60000
@@ -46,11 +46,17 @@ xaringanExtra::use_xaringan_extra(include = c("tile_view", "editable", "share_ag
 
 use_webcam(width = 150, height = 150)
 
- 
-use_animate_all("fade")
-
 use_extra_styles()
 ```
+background-image: url(images/DSN.PNG), url(images/R_logo.png)
+background-position: 0% 100%, 100% 0%
+background-size: 40%, 10%
+
+class: title-page, center, middle
+
+## Introduction to Rmarkdown
+
+---
 class: middle
 
 .w-100.lh-copy[
@@ -60,8 +66,6 @@ Goal:
 > The goal of this training is to make you awesome in the use of markdown, rmarkdown, and xaringan presentation.
 
 ]
-
-
 
 ---
 
@@ -85,8 +89,7 @@ class: bottom, inverse
 
 - [rmarkdown concept](#rmark3)
 
-- [xaringan and xaringanExtra](#rmark3)
-
+- [xaringan and xaringanExtra](#rmark4)
 
 ]
 
@@ -114,7 +117,7 @@ knitr::include_graphics("images/rmarkdown.png")
 # Introduction to Rmarkdown
 
 .w-100.lh-copy[
-R Markdown provides an authoring framework for data science. You can use a single R Markdown file to both:
+R Markdown provides an authoring framework for data science. You can use a single `R` Markdown file to:
 ]
 
 --
@@ -142,6 +145,7 @@ class: center, bottom
 ## Some examples
 
 ---
+class: middle
 
 ### Rmarkdown output
 
@@ -215,13 +219,10 @@ class: middle, center, inverse
 ]
 
 
---
-
 .pull-right[
 ### [Markdown to HTML](https://spec.commonmark.org/dingus/)
 ]
 
---
 
 ```{r, echo=FALSE, out.height= "60%", out.width="60%"}
 knitr::include_graphics("images/Markdown.png")
