@@ -48,7 +48,7 @@ use_webcam(width = 150, height = 150)
 
 use_extra_styles()
 ```
-background-image: url(images/DSN.PNG), url(images/R_logo.png)
+background-image: url(images/gbg.jpg), url(images/R_logo.png)
 background-position: 0% 100%, 100% 0%
 background-size: 40%, 10%
 
@@ -58,8 +58,8 @@ class: title-page, center, middle
 
 ```{r, echo=FALSE}
 use_logo(
-  image_url = "images/logo.png",
-  link_url = "http://www.datasciencenigeria.org",
+  image_url = "images/gbg.jpg",
+  link_url = "http://bit.ly/gbganalyst",
   position = xaringanExtra::css_position(top = "1em", right = "1em"),
   exclude_class = c("title-page", "inverse", "hide_logo")
 )
