@@ -56,9 +56,12 @@ use_animate_all("fade")
 use_broadcast()
 
 ```
-background-image: url(images/DSN.PNG), url(images/R_logo.png)
+background-image: url(images/gbg.jpg), url(images/R_logo.png)
 background-position: 0% 100%, 100% 0%
 background-size: 40%, 10%
+
+
+
 
 class: title-page, center, middle
 
