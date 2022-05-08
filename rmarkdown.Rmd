@@ -123,6 +123,7 @@ knitr::include_graphics("images/rmarkdown.png")
 
 
 ---
+class: middle
 
 # Introduction to Rmarkdown
 
@@ -230,13 +231,15 @@ class: middle, center, inverse
 
 
 .pull-right[
-### [Markdown to HTML](https://spec.commonmark.org/dingus/)
+### [Markdown to html](https://spec.commonmark.org/dingus/)
 ]
 
 
 ```{r, echo=FALSE, out.height= "60%", out.width="60%"}
 knitr::include_graphics("images/Markdown.png")
 ```
+
+### [text to html](https://www.tiny.cloud/docs/demo/full-featured)
 
 ---
 class: middle, center, inverse
